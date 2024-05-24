@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dane Analizy Czytelnictwa</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper blue">
+                <a href="index.html" class="brand-logo center">Dane Analizy Czytelnictwa</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <h5>Dzieci</h5>
+                    <select id="dzieci" class="browser-default" onchange="showRating('dzieci')">
+                        <option value="" disabled selected>Wybierz książkę</option>
+                        <option value="Dzieci" data-rating="5">Kopciuszek</option>
+                        <option value="Dzieci" data-rating="4">Księga dżungli</option>
+                        <option value="Dzieci" data-rating="5">Piotruś Pan</option>
+                        <option value="Dzieci" data-rating="4">Calineczka</option>
+                        <option value="Dzieci" data-rating="5">Mały Książę</option>
+                        <option value="Dzieci" data-rating="4">Alicja w Krainie Czarów</option>
+                        <option value="Dzieci" data-rating="5">Chatka Puchatka</option>
+                        <option value="Dzieci" data-rating="4">Kubuś Puchatek</option>
+                        <option value="Dzieci" data-rating="5">Królowa Śniegu</option>
+                        <option value="Dzieci" data-rating="4">Władca Pierścieni</option>
+                        <option value="Dzieci" data-rating="5">Frankenstein</option>
+                        <option value="Dzieci" data-rating="4">Harry Potter i Kamień Filozoficzny</option>
+                        <option value="Dzieci" data-rating="5">Zaczarowany Ołówek</option>
+                        <option value="Dzieci" data-rating="4">Pippi Pończoszanka</option>
+                        <option value="Dzieci" data-rating="5">Mary Poppins</option>
+                        <option value="Dzieci" data-rating="4">Złota rybka</option>
+                        <option value="Dzieci" data-rating="5">Basnie Braci Grimm</option>
+                        <option value="Dzieci" data-rating="4">Czarodziej z krainy Oz</option>
+                        <option value="Dzieci" data-rating="5">Koszmarna podróż</option>
+                        <option value="Dzieci" data-rating="4">Hobbit</option>
+                    </select>
+                    <p id="rating_dzieci" style="display: none;">Ocena: </p>
+                </div>
+                <div class="col s12 m4">
+                    <h5>Młodzież</h5>
+                    <select id="mlodziez" class="browser-default" onchange="showRating('mlodziez')">
+                        <option value="" disabled selected>Wybierz książkę</option>
+                        <option value="Młodzież" data-rating="3">Harry Potter i Komnata Tajemnic</option>
+                        <option value="Młodzież" data-rating="4">Złodziejka książek</option>
+                        <option value="Młodzież" data-rating="4.5">Mroczne Materie</option>
+                        <option value="Młodzież" data-rating="3.5">Igrzyska Śmierci</option>
+                        <option value="Młodzież" data-rating="5">Wampir Lestat</option>
+                        <option value="Młodzież" data-rating="3">Percy Jackson i Olimpijczycy: Złodziej Pioruna</option>
+                        <option value="Młodzież" data-rating="4.5">Pamiętnik Księżniczki</option>
+                        <option value="Młodzież" data-rating="3.5">Mroczne sekrety</option>
+                        <option value="Młodzież" data-rating="4">Kroniki Spiderwick</option>
+                        <option value="Młodzież" data-rating="4.5">Pamiętnik wampirów</option>
+                        <option value="Młodzież" data-rating="3.5">Niezgodna</option>
+                        <option value="Młodzież" data-rating="4">Hunger Games: Plonowanie</option>
+                        <option value="Młodzież" data-rating="4.5">Nim góry zaszumieją</option>
+                        <option value="Młodzież" data-rating="3">Zanim się pojawiłeś</option>
+                        <option value="Młodzież" data-rating="4">Niebo istnieje... naprawdę</option>
+                        <option value="Młodzież" data-rating="4.5">Dziewczyna z pociągu</option>
+                        <option value="Młodzież" data-rating="3">Piękna i Bestia</option>
+                        <option value="Młodzież" data-rating="4">Dziewczyna z tatuażem</option>
+                        <option value="Młodzież" data-rating="4.5">Mroczne umysły</option>
+                        <option value="Młodzież" data-rating="3">Ostatnia piosenka</option>
+                    </select>
+                    <p id="rating_mlodziez" style="display: none;">Ocena: </p>
+                </div>
+                <div class="col s12 m4">
+                    <h5>Dorośli młodzi</h5>
+                    <select id="dorosli-mlodzi" class="browser-default" onchange="showRating('dorosli-mlodzi')">
+                        <option value="" disabled selected>Wybierz książkę</option>
+                        <option value="Dorośli młodzi" data-rating="3.5">Mistrz i Małgorzata</option>
+                        <option value="Dorośli młodzi" data-rating="4">Wiedźmin: Ostatnie życzenie</option>
+                        <option value="Dorośli młodzi" data-rating="4.5">Władca Pierścieni</option>
+                        <option value="Dorośli młodzi" data-rating="3">Zabójstwo Rogera Ackroyda</option>
+                        <option value="Dorośli młodzi" data-rating="4.5">Portret Doriana Graya</option>
+                        <option value="Dorośli młodzi" data-rating="3.5">Sto lat samotności</option>
+                        <option value="Dorośli młodzi" data-rating="4">Rękopis znaleziony w Saragossie</option>
+                        <option value="Dorośli młodzi" data-rating="4.5">Lśnienie</option>
+                        <option value="Dorośli młodzi" data-rating="3">Mistrz Kryminału</option>
+                        <option value="Dorośli młodzi" data-rating="4">Upadek gigantów</option>
+                        <option value="Dorośli młodzi" data-rating="4.5">Pan Tadeusz</option>
+                        <option value="Dorośli młodzi" data-rating="3.5">Dracula</option>
+                        <option value="Dorośli młodzi" data-rating="4">Rok 1984</option>
+                        <option value="Dorośli młodzi" data-rating="4.5">Opowieść podręcznej</option>
+                        <option value="Dorośli młodzi" data-rating="3">Niezgodna</option>
+                        <option value="Dorośli młodzi" data-rating="4">Idiota</option>
+                        <option value="Dorośli młodzi" data-rating="4.5">Młyn na wzgórzu</option>
+                        <option value="Dorośli młodzi" data-rating="3.5">Władca much</option>
+                        <option value="Dorośli młodzi" data-rating="4">Zamek z piasku</option>
+                        <option value="Dorośli młodzi" data-rating="4.5">Skazani na Shawshank</option>
+                    </select>
+                    <p id="rating_dorosli-mlodzi" style="display: none;">Ocena: </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4">
+                    <h5>Dorośli</h5>
+                    <select id="dorosli" class="browser-default" onchange="showRating('dorosli')">
+                        <option value="" disabled selected>Wybierz książkę</option>
+                        <option value="Dorośli" data-rating="3">Zdobyć i stracić</option>
+                        <option value="Dorośli" data-rating="3.5">Wiatr wierzby</option>
+                        <option value="Dorośli" data-rating="4">Cztery pory roku</option>
+                        <option value="Dorośli" data-rating="4.5">Mężczyzna na balkonie</option>
+                        <option value="Dorośli" data-rating="5">Czas patriotów</option>
+                        <option value="Dorośli" data-rating="3">Pan Norrell i jego czarodziejski lokaj</option>
+                        <option value="Dorośli" data-rating="3.5">Dwa miesiące zamarzniętego kraju</option>
+                        <option value="Dorośli" data-rating="4">Książę ciemności</option>
+                        <option value="Dorośli" data-rating="4.5">Most do Terabithii</option>
+                        <option value="Dorośli" data-rating="5">Martwe dusze</option>
+                        <option value="Dorośli" data-rating="3">Pierwszy grób po prawej</option>
+                        <option value="Dorośli" data-rating="3.5">Lśnienie</option>
+                        <option value="Dorośli" data-rating="4">Wielki Gatsby</option>
+                        <option value="Dorośli" data-rating="4.5">Hobbit, czyli tam i z powrotem</option>
+                        <option value="Dorośli" data-rating="5">Powrót do Edenu</option>
+                        <option value="Dorośli" data-rating="3">Pożegnanie z bronią</option>
+                        <option value="Dorośli" data-rating="3.5">Męczennik</option>
+                        <option value="Dorośli" data-rating="4">Kapitan Alatriste</option>
+                        <option value="Dorośli" data-rating="4.5">Siedem lat w Tybecie</option>
+                        <option value="Dorośli" data-rating="5">Zima świata</option>
+                    </select>
+                    <p id="rating_dorosli" style="display: none;">Ocena: </p>
+                </div>
+                <div class="col s12 m4">
+                    <h5>Seniorzy</h5>
+                    <select id="seniorzy" class="browser-default" onchange="showRating('seniorzy')">
+                        <option value="" disabled selected>Wybierz książkę</option>
+                        <option value="Seniorzy" data-rating="3">Jane Eyre</option>
+                        <option value="Seniorzy" data-rating="3.5">Wieża Jaskółki</option>
+                        <option value="Seniorzy" data-rating="4">Dzieci z Bullerbyn</option>
+                        <option value="Seniorzy" data-rating="4.5">Anioły i demony</option>
+                        <option value="Seniorzy" data-rating="5">W pustyni i w puszczy</option>
+                        <option value="Seniorzy" data-rating="3">W stronę wygnania</option>
+                        <option value="Seniorzy" data-rating="3.5">Złodziejka książek</option>
+                        <option value="Seniorzy" data-rating="4">Sekretne okno</option>
+                        <option value="Seniorzy" data-rating="4.5">Człowiek z Marsa</option>
+                        <option value="Seniorzy" data-rating="5">Sherlock Holmes</option>
+                        <option value="Seniorzy" data-rating="3">Harry Potter i Kamień Filozoficzny</option>
+                        <option value="Seniorzy" data-rating="3.5">Zamek z piasku</option>
+                        <option value="Seniorzy" data-rating="4">Ostatnie życzenie</option>
+                        <option value="Seniorzy" data-rating="4.5">Królowa Słońca</option>
+                        <option value="Seniorzy" data-rating="5">Sto lat samotności</option>
+                        <option value="Seniorzy" data-rating="3">Mistrz i Małgorzata</option>
+                        <option value="Seniorzy" data-rating="3.5">Pan Tadeusz</option>
+                        <option value="Seniorzy" data-rating="4">Wampir Lestat</option>
+                        <option value="Seniorzy" data-rating="4.5">Dziady</option>
+                        <option value="Seniorzy" data-rating="5">Mroczne Materie</option>
+                    </select>
+                    <p id="rating_seniorzy" style="display: none;">Ocena: </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function showRating(category) {
+            var select = document.getElementById(category);
+            var rating = document.getElementById("rating_" + category);
+            rating.style.display = "block";
+            rating.innerText = "Ocena: " + select.options[select.selectedIndex].getAttribute("data-rating");
+        }
+    </script>
+</body>
+
+</html>
